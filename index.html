@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>COLLASE APP GROUP C</title>
+    <title>AVSEC Auto-Fit Collage Report Generator</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght=400;700&family=Plus+Jakarta+Sans:wght=400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -37,12 +37,36 @@
       .animate-premium {
         animation: customBlurIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
       }
+
+      /* Gaya Text Shadow Glow Kekinian untuk Copyright */
+      .neon-glow-text {
+        text-shadow:
+          0 0 10px rgba(59, 130, 246, 0.4),
+          0 0 20px rgba(99, 102, 241, 0.2);
+      }
+
+      /* Animasi Text Gradasi Berjalan */
+      @keyframes gradientMove {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      .animate-gradient-text {
+        background-size: 200% auto;
+        animation: gradientMove 3s linear infinite;
+      }
     </style>
   </head>
   <body
-    class="text-slate-100 min-h-screen antialiased p-4 md:p-8 flex items-center justify-center"
+    class="text-slate-100 min-h-screen antialiased p-4 md:p-8 flex flex-col items-center justify-between"
   >
-    <div class="w-full max-w-5xl mx-auto space-y-6">
+    <div class="w-full max-w-5xl mx-auto space-y-6 flex-grow mb-12">
       <header
         class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 bg-slate-900/40 border border-slate-800 p-5 rounded-2xl backdrop-blur-md animate-premium"
       >
@@ -56,10 +80,10 @@
             <h1
               class="text-xl md:text-2xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent"
             >
-              Collase Report System
+              AVSEC Collage Premium System
             </h1>
             <p class="text-xs text-slate-400">
-              Aplikasi Pembuat Report Baggage Make Up Area T2E
+              Anti-Potong • Presisi HP • Teks Sejajar • Maskot Konyol
             </p>
           </div>
         </div>
@@ -67,7 +91,9 @@
           class="flex items-center gap-2 self-start md:self-center bg-slate-800/60 px-3 py-1.5 rounded-lg border border-slate-700/50"
         >
           <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-          <span class="text-xs font-medium text-slate-300"></span>
+          <span class="text-xs font-medium text-slate-300"
+            >Auto-Fit Layout Active</span
+          >
         </div>
       </header>
 
@@ -86,7 +112,7 @@
             <div>
               <label
                 class="block text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1"
-                >Tanggal on</label
+                >Tanggal Otomatis</label
               >
               <input
                 type="text"
@@ -227,7 +253,7 @@
             >
               <div
                 id="collageGrid"
-                class="grid gap-[5px] w-full bg-white transition-all duration-300"
+                class="grid gap-[5px] w-full bg-white items-start transition-all duration-300"
               >
                 <div
                   id="placeholderText"
@@ -248,27 +274,27 @@
                   REPORT BAGASI DPR AREA BMA CGKIU T2E
                 </p>
 
-                <div class="max-w-xs mx-auto text-left space-y-0.5">
-                  <p>
-                    <span class="inline-block w-20 text-gray-500 font-medium"
-                      >TGL</span
-                    >: <span id="lblTgl" class="font-bold"></span>
-                  </p>
-                  <p>
-                    <span class="inline-block w-20 text-gray-500 font-medium"
-                      >FLIGHT</span
-                    >: <span id="lblFlight" class="font-bold"></span>
-                  </p>
-                  <p>
-                    <span class="inline-block w-20 text-gray-500 font-medium"
-                      >ROUTE</span
-                    >: <span id="lblRoute" class="font-bold"></span>
-                  </p>
-                  <p>
-                    <span class="inline-block w-20 text-gray-500 font-medium"
-                      >STD</span
-                    >: <span id="lblStd" class="font-bold"></span>
-                  </p>
+                <div class="max-w-[280px] mx-auto text-left space-y-0.5">
+                  <div class="flex">
+                    <span class="w-16 text-gray-500 font-medium">TGL</span
+                    ><span class="mr-2">:</span
+                    ><span id="lblTgl" class="font-bold"></span>
+                  </div>
+                  <div class="flex">
+                    <span class="w-16 text-gray-500 font-medium">FLIGHT</span
+                    ><span class="mr-2">:</span
+                    ><span id="lblFlight" class="font-bold"></span>
+                  </div>
+                  <div class="flex">
+                    <span class="w-16 text-gray-500 font-medium">ROUTE</span
+                    ><span class="mr-2">:</span
+                    ><span id="lblRoute" class="font-bold"></span>
+                  </div>
+                  <div class="flex">
+                    <span class="w-16 text-gray-500 font-medium">STD</span
+                    ><span class="mr-2">:</span
+                    ><span id="lblStd" class="font-bold"></span>
+                  </div>
                 </div>
 
                 <p class="text-gray-400 font-sans tracking-widest my-1">
@@ -313,7 +339,171 @@
       </div>
     </div>
 
-    <canvas id="hiddenCanvas" class="hidden"></canvas>
+    <canvas id="exportCanvas" class="hidden"></canvas>
+
+    <footer
+      class="w-full max-w-xl mx-auto mb-4 px-4 text-center animate-premium"
+      style="animation-delay: 200ms"
+    >
+      <div
+        class="bg-slate-900/30 border border-slate-800/60 backdrop-blur-md rounded-2xl py-3 px-6 flex items-center justify-center gap-2 shadow-lg shadow-black/10 group hover:border-slate-700/80 transition-all duration-300"
+      >
+        <span class="text-slate-500 text-xs tracking-wide"
+          >© 2026 Crafted with 🔥 by</span
+        >
+        <span
+          class="neon-glow-text animate-gradient-text bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent font-bold text-sm tracking-wider uppercase group-hover:scale-105 transition-transform duration-300"
+        >
+          Dawam
+        </span>
+      </div>
+    </footer>
+
+    <div
+      class="fixed bottom-4 left-4 z-50 pointer-events-none flex flex-col items-center animate-[fadeIn_0.5s_ease]"
+    >
+      <div
+        class="bg-gradient-to-r from-amber-400 to-orange-400 text-slate-900 text-xs font-bold px-3 py-1.5 rounded-xl shadow-lg mb-2 border border-amber-300 relative animate-bounce text-center"
+      >
+        <span id="catTalk">AVSEC Semangat! 🐾</span>
+        <div
+          class="absolute bottom-[-5px] left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-amber-400"
+        ></div>
+      </div>
+
+      <div class="cat-giant-dance relative w-32 h-32 origin-bottom">
+        <div
+          class="absolute top-1 left-4 w-8 h-8 bg-slate-400 rotate-[15deg] rounded-tl-2xl border-l-4 border-slate-500"
+        >
+          <div class="w-4 h-4 bg-pink-300 m-1 rounded-tl-xl"></div>
+        </div>
+        <div
+          class="absolute top-1 right-4 w-8 h-8 bg-slate-400 -rotate-[15deg] rounded-tr-2xl border-r-4 border-slate-500"
+        >
+          <div class="w-4 h-4 bg-pink-300 m-1 float-right rounded-tr-xl"></div>
+        </div>
+        <div
+          class="absolute top-6 left-2 w-28 h-20 bg-slate-300 rounded-[40px] border-b-4 border-slate-400 shadow-md"
+        >
+          <div
+            class="absolute top-6 left-6 w-5 h-5 bg-slate-800 rounded-full flex items-center justify-center"
+          >
+            <div
+              class="w-2 h-2 bg-white rounded-full absolute top-1 left-1 animate-pulse"
+            ></div>
+          </div>
+          <div
+            class="absolute top-6 right-6 w-5 h-5 bg-slate-800 rounded-full flex items-center justify-center"
+          >
+            <div
+              class="w-2 h-2 bg-white rounded-full absolute top-1 left-1 animate-pulse"
+            ></div>
+          </div>
+          <div
+            class="absolute top-10 left-3 w-4 h-2 bg-pink-300/60 rounded-full blur-[1px]"
+          ></div>
+          <div
+            class="absolute top-10 right-3 w-4 h-2 bg-pink-300/60 rounded-full blur-[1px]"
+          ></div>
+          <div
+            class="absolute top-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+          >
+            <div class="w-2.5 h-1.5 bg-pink-400 rounded-full"></div>
+            <div
+              class="text-slate-600 font-bold text-xs leading-none mt-[-2px]"
+            >
+              w
+            </div>
+          </div>
+          <div
+            class="absolute top-10 left-[-4px] w-5 h-0.5 bg-slate-400 rotate-[10deg]"
+          ></div>
+          <div class="absolute top-12 left-[-4px] w-5 h-0.5 bg-slate-400"></div>
+          <div
+            class="absolute top-10 right-[-4px] w-5 h-0.5 bg-slate-400 -rotate-[10deg]"
+          ></div>
+          <div
+            class="absolute top-12 right-[-4px] w-5 h-0.5 bg-slate-400"
+          ></div>
+        </div>
+        <div
+          class="absolute bottom-0 left-7 w-18 h-16 bg-slate-300 rounded-t-[35px] border-t-2 border-white"
+        >
+          <div
+            class="absolute top-0 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-amber-400 rounded-full border border-amber-500 flex items-center justify-center shadow"
+          >
+            <div class="w-1.5 h-1.5 bg-amber-600 rounded-full"></div>
+          </div>
+        </div>
+        <div
+          class="cat-arm-left absolute top-14 left-2 w-5 h-10 bg-slate-300 rounded-full origin-top"
+        ></div>
+        <div
+          class="cat-arm-right absolute top-14 right-2 w-5 h-10 bg-slate-300 rounded-full origin-top"
+        ></div>
+        <div
+          class="cat-tail-giant absolute bottom-2 right-2 w-4 h-14 bg-slate-400 rounded-full origin-bottom"
+        ></div>
+      </div>
+    </div>
+
+    <style>
+      .cat-giant-dance {
+        animation: catGiantGroove 0.5s infinite alternate
+          cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      .cat-arm-left {
+        animation: armSwingLeft 0.25s infinite alternate ease-in-out;
+      }
+      .cat-arm-right {
+        animation: armSwingRight 0.25s infinite alternate ease-in-out;
+      }
+      .cat-tail-giant {
+        animation: tailWagGiant 0.4s infinite alternate ease-in-out;
+      }
+      @keyframes catGiantGroove {
+        0% {
+          transform: translateX(-8px) rotate(-10deg) scaleY(1);
+        }
+        100% {
+          transform: translateX(8px) rotate(10deg) scaleY(1);
+        }
+      }
+      @keyframes armSwingLeft {
+        0% {
+          transform: rotate(40deg);
+        }
+        100% {
+          transform: rotate(-30deg);
+        }
+      }
+      @keyframes armSwingRight {
+        0% {
+          transform: rotate(-30deg);
+        }
+        100% {
+          transform: rotate(40deg);
+        }
+      }
+      @keyframes tailWagGiant {
+        0% {
+          transform: rotate(-35deg);
+        }
+        100% {
+          transform: rotate(35deg);
+        }
+      }
+      @keyframes scaleUp {
+        0% {
+          transform: scale(0.96);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    </style>
 
     <script>
       lucide.createIcons();
@@ -324,8 +514,8 @@
       const placeholderText = document.getElementById("placeholderText");
       const downloadBtn = document.getElementById("downloadBtn");
       const clearBtn = document.getElementById("clearBtn");
-      const canvas = document.getElementById("hiddenCanvas");
       const chkWatermark = document.getElementById("chkWatermark");
+      const exportCanvas = document.getElementById("exportCanvas");
 
       // Form Inputs
       const inputTanggal = document.getElementById("inputTanggal");
@@ -343,7 +533,7 @@
 
       let loadedImages = [];
 
-      // Set Tanggal Otomatis (Rabu, 08 JULI 2026)
+      // Set Tanggal Otomatis
       function generateIdDate(date) {
         const days = [
           "Minggu",
@@ -368,7 +558,7 @@
           "NOVEMBER",
           "DESEMBER",
         ];
-        return `${days[date.getDay()]}, ${String(date.getDate()).padStart(2, "0")} ${months[date.getMonth()]} ${date.getFullYear()}`;
+        return `${days[date.getDay()]} , ${String(date.getDate()).padStart(2, "0")} ${months[date.getMonth()]} ${date.getFullYear()}`;
       }
       inputTanggal.value = generateIdDate(new Date());
 
@@ -384,7 +574,7 @@
       );
       syncForm();
 
-      // Ambil File Gambar
+      // Ambil Foto
       imageInput.addEventListener("change", function (e) {
         const files = Array.from(e.target.files);
         if (files.length === 0) return;
@@ -425,11 +615,11 @@
         loadedImages.forEach((img, i) => {
           const block = document.createElement("div");
           block.className =
-            "relative w-full overflow-hidden bg-gray-50 border border-gray-200 rounded-lg shadow-sm";
+            "relative w-full overflow-hidden bg-gray-50 border border-gray-200 rounded-lg shadow-sm animate-[scaleUp_0.3s_ease-out_forwards]";
 
           const htmlImg = document.createElement("img");
           htmlImg.src = img.src;
-          htmlImg.className = "w-full h-auto block object-contain"; // Menggunakan object-contain agar pratinjau tidak terpotong
+          htmlImg.className = "w-full h-auto block object-cover max-h-[300px]";
 
           block.appendChild(htmlImg);
 
@@ -451,211 +641,211 @@
       });
       chkWatermark.addEventListener("change", refreshGridUI);
 
-      // ENGINE GENERATOR CANVAS HD (ANTI-POTONG & TULISAN DI TENGAH)
+      // ENGINE DOWNLOAD NATIVE - 100% SEJAJAR DAN TEKS TIDAK ACAK-ACAKAN
       downloadBtn.addEventListener("click", function () {
         if (loadedImages.length === 0) {
           alert("Pilih/Upload foto dokumentasi terlebih dahulu.");
           return;
         }
 
-        const ctx = canvas.getContext("2d");
-        const targetCanvasWidth = 1200;
-        const gapSize = 5; // Jarak margin antar gambar tetap 5px presisi
-
+        const ctx = exportCanvas.getContext("2d");
+        const targetWidth = 1000;
+        const gap = 6;
         const total = loadedImages.length;
-        let cols = 1;
-        if (total === 2) cols = 2;
-        if (total === 3) cols = 3;
-        if (total >= 4) cols = 2;
 
+        let cols = total === 1 ? 1 : total === 2 || total >= 4 ? 2 : 3;
         const rows = Math.ceil(total / cols);
-        const netWidth = targetCanvasWidth - gapSize * (cols - 1);
-        const singleImgW = netWidth / cols;
+        const itemWidth = (targetWidth - gap * (cols - 1)) / cols;
+        const itemHeight = itemWidth * 0.75;
 
-        // Hitung tinggi tiap baris gambar secara proporsional dinamis agar tidak terpotong
-        let rowHeights = [];
-        for (let r = 0; r < rows; r++) {
-          let maxHeightInRow = 0;
-          for (let c = 0; c < cols; c++) {
-            const idx = r * cols + c;
-            if (idx < total) {
-              const img = loadedImages[idx];
-              const calculatedHeight = singleImgW * (img.height / img.width);
-              if (calculatedHeight > maxHeightInRow) {
-                maxHeightInRow = calculatedHeight;
-              }
-            }
-          }
-          rowHeights.push(maxHeightInRow);
-        }
+        const gridTotalHeight = rows * itemHeight + (rows - 1) * gap;
+        const infoHeight = 440;
 
-        // Total Tinggi Area Gambar Kolase
-        const totalCollageHeight =
-          rowHeights.reduce((a, b) => a + b, 0) + gapSize * (rows - 1);
-        const informationalAreaHeight = 440; // Ruang teks diperbesar agar tulisan tidak berhimpitan/terpotong
+        exportCanvas.width = targetWidth;
+        exportCanvas.height = gridTotalHeight + infoHeight;
 
-        // Atur Frame Canvas Utama Secara Dinamis
-        canvas.width = targetCanvasWidth;
-        canvas.height = totalCollageHeight + informationalAreaHeight;
-
-        // Background Putih
+        // Background Putih Bersih
         ctx.fillStyle = "#FFFFFF";
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillRect(0, 0, exportCanvas.width, exportCanvas.height);
 
-        // Gambar seluruh foto secara proporsional utuh (No-Cropping)
-        loadedImages.forEach((img, index) => {
-          const colPos = index % cols;
-          const rowPos = Math.floor(index / cols);
+        // Render Foto-Foto Dokumentasi
+        loadedImages.forEach((img, idx) => {
+          const c = idx % cols;
+          const r = Math.floor(idx / cols);
+          const x = c * (itemWidth + gap);
+          const y = r * (itemHeight + gap);
 
-          const renderX = colPos * (singleImgW + gapSize);
+          ctx.save();
+          ctx.beginPath();
+          ctx.rect(x, y, itemWidth, itemHeight);
+          ctx.clip();
 
-          // Hitung posisi Y berdasarkan total tinggi baris sebelumnya
-          let renderY = 0;
-          for (let i = 0; i < rowPos; i++) {
-            renderY += rowHeights[i] + gapSize;
+          const imgRatio = img.width / img.height;
+          const targetRatio = itemWidth / itemHeight;
+          let drawW, drawH, drawX, drawY;
+
+          if (imgRatio > targetRatio) {
+            drawH = itemHeight;
+            drawW = itemHeight * imgRatio;
+            drawX = x - (drawW - itemWidth) / 2;
+            drawY = y;
+          } else {
+            drawW = itemWidth;
+            drawH = itemWidth / imgRatio;
+            drawX = x;
+            drawY = y - (drawH - itemHeight) / 2;
           }
 
-          const currentImgHeight = singleImgW * (img.height / img.width);
+          ctx.drawImage(img, drawX, drawY, drawW, drawH);
+          ctx.restore();
 
-          // Gambar utuh tanpa distort/penyok
-          ctx.drawImage(
-            img,
-            0,
-            0,
-            img.width,
-            img.height,
-            renderX,
-            renderY,
-            singleImgW,
-            currentImgHeight,
-          );
-
-          // Cetak Watermark Waktu Digital jika aktif
+          // Watermark Waktu
           if (chkWatermark.checked) {
-            ctx.fillStyle = "rgba(0, 0, 0, 0.7)";
-            ctx.font = "bold 16px Courier New, monospace";
-            const txtW = ctx.measureText(img.timestampString).width + 20;
-            ctx.fillRect(
-              renderX + singleImgW - txtW - 10,
-              renderY + currentImgHeight - 35,
-              txtW,
-              26,
-            );
-
+            ctx.fillStyle = "rgba(0,0,0,0.7)";
+            ctx.font = "bold 14px monospace";
+            const tw = ctx.measureText(img.timestampString).width + 16;
+            ctx.fillRect(x + itemWidth - tw - 6, y + itemHeight - 28, tw, 22);
             ctx.fillStyle = "#FFFFFF";
             ctx.fillText(
               img.timestampString,
-              renderX + singleImgW - txtW + 10,
-              renderY + currentImgHeight - 17,
+              x + itemWidth - tw + 2,
+              y + itemHeight - 13,
             );
           }
         });
 
-        // Garis Pembatas Putus-putus
-        const textYStart = totalCollageHeight + 50;
-        ctx.strokeStyle = "#9CA3AF";
+        // Garis Putus-Putus Pembatas Dokumen
+        const textYStart = gridTotalHeight + 45;
+        ctx.strokeStyle = "#CBD5E1";
         ctx.lineWidth = 2;
-        ctx.setLineDash([10, 8]);
+        ctx.setLineDash([8, 6]);
         ctx.beginPath();
-        ctx.moveTo(50, totalCollageHeight + 20);
-        ctx.lineTo(targetCanvasWidth - 50, totalCollageHeight + 20);
+        ctx.moveTo(30, gridTotalHeight + 15);
+        ctx.lineTo(targetWidth - 30, gridTotalHeight + 15);
         ctx.stroke();
         ctx.setLineDash([]);
 
-        // RENDER TEKS - SETTING POSISI TENGAH (CENTER ALIGNMENT)
+        // Judul Utama Rata Tengah
+        ctx.textAlign = "center";
         ctx.fillStyle = "#000000";
-        ctx.textAlign = "center"; // Kunci posisi teks rata tengah
-
-        // Judul Laporan Utama
-        ctx.font = "bold 28px Courier New, monospace";
+        ctx.font = "bold 24px monospace";
         ctx.fillText(
           "REPORT BAGASI DPR AREA BMA CGKIU T2E",
-          targetCanvasWidth / 2,
+          targetWidth / 2,
           textYStart,
         );
 
-        // Blok Informasi Data Ringkas
-        ctx.font = "24px Courier New, monospace";
-        let cursorY = textYStart + 55;
-        const leading = 36;
+        // ENGINE BARU: Pengunci Koordinat Rata Kiri & Titik Dua Sejajar Sempurna
+        let curY = textYStart + 45;
+        const lh = 32;
 
-        ctx.fillText(
-          `TGL       : ${inputTanggal.value}`,
-          targetCanvasWidth / 2,
-          cursorY,
-        );
-        cursorY += leading;
-        ctx.fillText(
-          `FLIGHT    : ${inputFlight.value.toUpperCase()}`,
-          targetCanvasWidth / 2,
-          cursorY,
-        );
-        cursorY += leading;
-        ctx.fillText(
-          `ROUTE     : ${inputRoute.value.toUpperCase()}`,
-          targetCanvasWidth / 2,
-          cursorY,
-        );
-        cursorY += leading;
-        ctx.fillText(
-          `STD       : ${inputStd.value}`,
-          targetCanvasWidth / 2,
-          cursorY,
-        );
-        cursorY += leading;
+        const startXLabel = targetWidth / 2 - 180;
+        const startXValue = targetWidth / 2 - 30;
 
-        ctx.fillStyle = "#6B7280";
-        ctx.fillText("~~~~~~~~~", targetCanvasWidth / 2, cursorY);
-        cursorY += leading + 10;
+        const dataLaporan = [
+          { label: "TGL", value: inputTanggal.value },
+          { label: "FLIGHT", value: (inputFlight.value || "-").toUpperCase() },
+          { label: "ROUTE", value: (inputRoute.value || "-").toUpperCase() },
+          { label: "STD", value: inputStd.value || "-" },
+        ];
+
+        ctx.font = "20px monospace";
+        dataLaporan.forEach((item) => {
+          ctx.textAlign = "left";
+          ctx.fillText(item.label, startXLabel, curY);
+          ctx.fillText(":", startXValue - 15, curY);
+          ctx.fillText(item.value, startXValue, curY);
+          curY += lh;
+        });
+
+        // Teks Isi Catatan Bawah Rata Tengah Kembali
+        ctx.textAlign = "center";
+        ctx.fillStyle = "#94A3B8";
+        ctx.fillText("~~~~~~~~~", targetWidth / 2, curY);
+        curY += lh + 5;
 
         ctx.fillStyle = "#000000";
-        ctx.font = "bold 24px Courier New, monospace";
-        ctx.fillText(
-          "Berikut kami sampaikan :",
-          targetCanvasWidth / 2,
-          cursorY,
-        );
-        cursorY += leading;
+        ctx.font = "bold 20px monospace";
+        ctx.fillText("Berikut kami sampaikan :", targetWidth / 2, curY);
+        curY += lh;
 
-        ctx.font = "22px Courier New, monospace";
+        ctx.font = "18px monospace";
         ctx.fillText(
           "- Negatif temuan ataupun laporan bge damage di Area BMA CGKIU T2E",
-          targetCanvasWidth / 2,
-          cursorY,
+          targetWidth / 2,
+          curY,
         );
-        cursorY += leading + 25;
+        curY += lh + 20;
 
-        ctx.font = "bold 24px Courier New, monospace";
-        ctx.fillText("Mengetahui :", targetCanvasWidth / 2, cursorY);
-        cursorY += leading;
-        ctx.font = "22px Courier New, monospace";
-        ctx.fillText(
-          "Petugas Avsec BMA Onduty",
-          targetCanvasWidth / 2,
-          cursorY,
-        );
-        cursorY += leading + 5;
+        ctx.font = "bold 20px monospace";
+        ctx.fillText("Mengetahui :", targetWidth / 2, curY);
+        curY += lh;
+        ctx.font = "18px monospace";
+        ctx.fillText("Petugas Avsec BMA Onduty", targetWidth / 2, curY);
+        curY += lh;
 
-        ctx.font = "bold 26px Courier New, monospace";
-        ctx.fillText(`- ${inputPetugas.value}`, targetCanvasWidth / 2, cursorY);
-        cursorY += leading + 30;
+        ctx.font = "bold 22px monospace";
+        ctx.fillText(`- ${inputPetugas.value || "-"}`, targetWidth / 2, curY);
+        curY += lh + 25;
 
-        // Penutup Tim Rata Tengah
-        ctx.font = "bold 20px Helvetica, Arial, sans-serif";
-        ctx.fillStyle = "#4B5563";
-        ctx.fillText("TERIMA KASIH", targetCanvasWidth / 2, cursorY);
-        cursorY += 24;
+        ctx.font = "bold 18px sans-serif";
+        ctx.fillStyle = "#64748B";
+        ctx.fillText("TERIMA KASIH", targetWidth / 2, curY);
+        curY += 22;
         ctx.fillStyle = "#2563EB";
-        ctx.fillText("CGKT2E TEAM", targetCanvasWidth / 2, cursorY);
+        ctx.fillText("CGKT2E TEAM", targetWidth / 2, curY);
 
-        // Mulai Proses Download Otomatis
-        const outUrl = canvas.toDataURL("image/png", 1.0);
-        const hiddenAnchor = document.createElement("a");
-        const nameSignature = inputFlight.value.trim().replace(/\s+/g, "_");
-        hiddenAnchor.download = `AVSEC_REPORT_${nameSignature || "DPR"}.png`;
-        hiddenAnchor.href = outUrl;
-        hiddenAnchor.click();
+        // Eksekusi Download Berkas PNG
+        const imageURI = exportCanvas.toDataURL("image/png");
+        const link = document.createElement("a");
+        const filename = `AVSEC_REPORT_${(inputFlight.value || "DPR").replace(/\s+/g, "_")}.png`;
+
+        link.download = filename;
+        link.href = imageURI;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
       });
+
+      // Dialog Komedi Kucing
+      const quotes = [
+        "Aman Kendali! 🔒",
+        "Semangat Duty! 🐾",
+        "CGK T2E Mantap! ✈️",
+        "No Temuan! Clear! 👍",
+        "Siap Cetak HD! 📸",
+        "Mata ngantuk, tangan tetep gesit! 👁️👄👁️",
+        "Koper aja dijaga, apalagi hati kamu... eh 🫣",
+        "Bge Damage? Skip! Info yang bening-bening dong 🤭",
+        "Kerja keras demi sesuap nasi & sekotak whiskas 🐟",
+        "Awasi bagasi, jangan awasi mantan! 🙅‍♂️",
+        "Jangan lupa kedip, komandan mantau! 🕶️",
+        "Laporan aman, dompet... ah sudahlah 💸",
+        "Info takjil BMA? Eh belum waktunya ya? 🤣",
+        "Kerja shift 12 jam demi masa depan cerah ✨",
+        "Format laporan udah lurus, posisi kita kapan lurus ke pelaminan? 💘",
+        "Kucing joget, Avsec tetep melek! 🐱🔥",
+        "Aura bintang lima, gaji... bintang kejora 🌟",
+        "Tetap tenang walaupun HT rame terus 📻",
+        "Baggage aman, hati tenteram, pikiran liburan 🌊",
+      ];
+
+      let lastIndex = -1;
+      function gantiKataKonyol() {
+        let randomIndex;
+        do {
+          randomIndex = Math.floor(Math.random() * quotes.length);
+        } while (randomIndex === lastIndex);
+        lastIndex = randomIndex;
+        const txtEl = document.getElementById("catTalk");
+        if (txtEl) {
+          txtEl.parentElement.classList.remove("animate-bounce");
+          void txtEl.parentElement.offsetWidth;
+          txtEl.parentElement.classList.add("animate-bounce");
+          txtEl.textContent = quotes[randomIndex];
+        }
+      }
+      setInterval(gantiKataKonyol, 2000);
     </script>
   </body>
 </html>
