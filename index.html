@@ -3,15 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AVSEC Premium Collage Report Generator</title>
-    <!-- Tailwind CSS Modern via CDN -->
+    <title>COLLASE APP GROUP C</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Google Fonts Plus Jakarta Sans & JetBrains Mono untuk Teks Laporan -->
     <link
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
       body {
@@ -25,7 +22,6 @@
       .report-font {
         font-family: "JetBrains Mono", monospace;
       }
-      /* Animasi Lembut */
       @keyframes customBlurIn {
         from {
           opacity: 0;
@@ -47,7 +43,6 @@
     class="text-slate-100 min-h-screen antialiased p-4 md:p-8 flex items-center justify-center"
   >
     <div class="w-full max-w-5xl mx-auto space-y-6">
-      <!-- Header Section -->
       <header
         class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 bg-slate-900/40 border border-slate-800 p-5 rounded-2xl backdrop-blur-md animate-premium"
       >
@@ -55,144 +50,122 @@
           <div
             class="p-3 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-xl shadow-lg shadow-blue-500/20"
           >
-            <i
-              data-lucide="shield"
-              class="w-6 h-6 text-white animate-pulse"
-            ></i>
+            <i data-lucide="shield" class="w-6 h-6 text-white"></i>
           </div>
           <div>
             <h1
               class="text-xl md:text-2xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent"
             >
-              AVSEC Collage System
+              Collase Report System
             </h1>
             <p class="text-xs text-slate-400">
-              Presisi Tinggi • Resolusi Jernih • Laporan Digital
+              Aplikasi Pembuat Report Baggage Make Up Area T2E
             </p>
           </div>
         </div>
-        <!-- Sesuatu yang bagus: Status Indicator -->
         <div
           class="flex items-center gap-2 self-start md:self-center bg-slate-800/60 px-3 py-1.5 rounded-lg border border-slate-700/50"
         >
           <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-          <span class="text-xs font-medium text-slate-300"
-            >Ready to Export (HD)</span
-          >
+          <span class="text-xs font-medium text-slate-300"></span>
         </div>
       </header>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-        <!-- KIRI: Form Input & Kendali Data -->
         <div
-          class="lg:col-span-5 bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 md:p-6 space-y-5 shadow-2xl backdrop-blur-xl animate-premium"
+          class="lg:col-span-5 bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 md:p-6 space-y-4 shadow-2xl backdrop-blur-xl animate-premium"
           style="animation-delay: 50ms"
         >
-          <div
-            class="flex items-center justify-between border-b border-slate-800 pb-3"
+          <h2
+            class="text-md font-semibold flex items-center gap-2 text-blue-400 border-b border-slate-800 pb-2"
           >
-            <h2
-              class="text-md font-semibold flex items-center gap-2 text-blue-400"
-            >
-              <i data-lucide="terminal" class="w-4 h-4"></i> Input Parameter
-              Laporan
-            </h2>
-          </div>
+            <i data-lucide="terminal" class="w-4 h-4"></i> Parameter Laporan
+          </h2>
 
-          <div class="space-y-4">
+          <div class="space-y-3.5">
             <div>
               <label
-                class="block text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1.5"
-                >Tanggal Otomatis</label
+                class="block text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1"
+                >Tanggal on</label
               >
-              <div class="relative">
-                <i
-                  data-lucide="calendar"
-                  class="w-4 h-4 absolute left-3.5 top-3.5 text-slate-500"
-                ></i>
-                <input
-                  type="text"
-                  id="inputTanggal"
-                  class="w-full bg-slate-950/50 border border-slate-800 rounded-xl pl-10 pr-4 py-3 text-sm font-medium text-slate-400 cursor-not-allowed"
-                  readonly
-                />
-              </div>
+              <input
+                type="text"
+                id="inputTanggal"
+                class="w-full bg-slate-950/50 border border-slate-800 rounded-xl px-4 py-2.5 text-sm font-medium text-slate-400 cursor-not-allowed"
+                readonly
+              />
             </div>
 
             <div class="grid grid-cols-2 gap-3">
               <div>
                 <label
-                  class="block text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1.5"
-                  >Flight (INT)</label
+                  class="block text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1"
+                  >Flight</label
                 >
                 <input
                   type="text"
                   id="inputFlight"
                   value="IU 922"
-                  class="w-full bg-slate-800/30 border border-slate-700/60 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/40 transition-all font-medium text-slate-200"
+                  class="w-full bg-slate-800/30 border border-slate-700/60 rounded-xl px-3.5 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/40 transition-all font-medium text-slate-200"
                 />
               </div>
               <div>
                 <label
-                  class="block text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1.5"
-                  >STD (INT)</label
+                  class="block text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1"
+                  >STD</label
                 >
                 <input
                   type="text"
                   id="inputStd"
                   value="08:35"
-                  class="w-full bg-slate-800/30 border border-slate-700/60 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/40 transition-all font-medium text-slate-200"
+                  class="w-full bg-slate-800/30 border border-slate-700/60 rounded-xl px-3.5 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/40 transition-all font-medium text-slate-200"
                 />
               </div>
             </div>
 
             <div>
               <label
-                class="block text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1.5"
-                >Route (VARCHAR)</label
+                class="block text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1"
+                >Route</label
               >
               <input
                 type="text"
                 id="inputRoute"
                 value="CGK - PLM"
-                class="w-full bg-slate-800/30 border border-slate-700/60 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/40 transition-all font-medium text-slate-200"
+                class="w-full bg-slate-800/30 border border-slate-700/60 rounded-xl px-3.5 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/40 transition-all font-medium text-slate-200"
               />
             </div>
 
             <div>
               <label
-                class="block text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1.5"
-                >Petugas Avsec On Duty (STR)</label
+                class="block text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1"
+                >Petugas Avsec On Duty</label
               >
               <input
                 type="text"
                 id="inputPetugas"
                 value="Febrian"
-                class="w-full bg-slate-800/30 border border-slate-700/60 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/40 transition-all font-medium text-slate-200"
+                class="w-full bg-slate-800/30 border border-slate-700/60 rounded-xl px-3.5 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/40 transition-all font-medium text-slate-200"
               />
             </div>
 
-            <!-- Upload Box Modern -->
-            <div class="pt-2">
+            <div class="pt-1">
               <label
-                class="block text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-2"
-                >Unggah Foto Kamera / Galeri</label
+                class="block text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1.5"
+                >Unggah Foto Dokumentasi</label
               >
               <label
-                class="flex flex-col items-center justify-center w-full h-28 border-2 border-dashed border-slate-700/80 hover:border-blue-500/80 bg-slate-950/20 hover:bg-slate-800/30 rounded-xl cursor-pointer transition-all group relative overflow-hidden"
+                class="flex flex-col items-center justify-center w-full h-24 border-2 border-dashed border-slate-700/80 hover:border-blue-500/80 bg-slate-950/20 hover:bg-slate-800/30 rounded-xl cursor-pointer transition-all group"
               >
                 <div
                   class="flex flex-col items-center justify-center text-center px-4"
                 >
                   <i
                     data-lucide="upload-cloud"
-                    class="w-7 h-7 text-slate-500 group-hover:text-blue-400 group-hover:scale-110 transition-all mb-1.5"
+                    class="w-6 h-6 text-slate-500 group-hover:text-blue-400 mb-1"
                   ></i>
                   <p class="text-xs text-slate-300 font-medium">
-                    Ketuk untuk mengambil/memilih foto
-                  </p>
-                  <p class="text-[10px] text-slate-500 mt-0.5">
-                    Mendukung multi-upload sekaligus
+                    Ambil foto / Pilih berkas
                   </p>
                 </div>
                 <input
@@ -205,32 +178,25 @@
               </label>
             </div>
 
-            <!-- Sesuatu yang bagus: Pilihan Watermark Tambahan -->
             <div
               class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/60 flex items-center justify-between"
             >
               <div class="flex items-center gap-2">
                 <i data-lucide="clock" class="w-4 h-4 text-amber-400"></i>
-                <div class="text-left">
-                  <p class="text-xs font-medium text-slate-300">
-                    Watermark Waktu
-                  </p>
-                  <p class="text-[10px] text-slate-500">
-                    Cetak otomatis jam di sudut foto
-                  </p>
-                </div>
+                <span class="text-xs font-medium text-slate-300"
+                  >Tampilkan Waktu Digital</span
+                >
               </div>
               <input
                 type="checkbox"
                 id="chkWatermark"
                 checked
-                class="w-4 h-4 rounded text-blue-600 bg-slate-900 border-slate-700 focus:ring-blue-500"
+                class="w-4 h-4 rounded text-blue-600 bg-slate-900 border-slate-700"
               />
             </div>
           </div>
         </div>
 
-        <!-- KANAN: Real-time Preview Monitor & Download Action -->
         <div
           class="lg:col-span-7 space-y-4 animate-premium"
           style="animation-delay: 100ms"
@@ -239,7 +205,7 @@
             class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-4 md:p-5 shadow-2xl backdrop-blur-xl space-y-4"
           >
             <div
-              class="flex items-center justify-between border-b border-slate-800 pb-3"
+              class="flex items-center justify-between border-b border-slate-800 pb-2"
             >
               <h2
                 class="text-md font-semibold flex items-center gap-2 text-emerald-400"
@@ -249,116 +215,110 @@
               </h2>
               <button
                 id="clearBtn"
-                class="text-[11px] font-medium text-rose-400 hover:text-rose-300 flex items-center gap-1.5 bg-rose-500/10 hover:bg-rose-500/20 px-2.5 py-1.5 rounded-lg border border-rose-500/20 transition-all"
+                class="text-[11px] font-medium text-rose-400 hover:text-rose-300 flex items-center gap-1.5 bg-rose-500/10 px-2.5 py-1 rounded-lg border border-rose-500/20 transition-all"
               >
-                <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i> Reset Foto
+                <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i> Reset
               </button>
             </div>
 
-            <!-- Kertas Lembar Dokumen Laporan (Preview) -->
             <div
               id="previewContainer"
               class="bg-white text-black p-5 rounded-xl shadow-2xl overflow-hidden border border-gray-300/50 flex flex-col justify-between max-w-full mx-auto"
             >
-              <!-- Grid Kolase yang Sangat Presisi dengan Jarak Mutlak 5px -->
               <div
                 id="collageGrid"
                 class="grid gap-[5px] w-full bg-white transition-all duration-300"
               >
-                <!-- Placeholder saat kosong -->
                 <div
                   id="placeholderText"
                   class="col-span-full py-16 text-center text-slate-400 flex flex-col items-center justify-center gap-3 bg-slate-50 border border-dashed border-gray-200 rounded-lg"
                 >
-                  <div class="p-3 bg-white rounded-full shadow-sm">
-                    <i data-lucide="images" class="w-8 h-8 text-slate-300"></i>
-                  </div>
+                  <i data-lucide="images" class="w-8 h-8 text-slate-300"></i>
                   <p class="text-xs font-medium text-gray-500">
-                    Belum ada lampiran dokumentasi foto
+                    Belum ada lampiran foto
                   </p>
                 </div>
               </div>
 
-              <!-- Ruang Nota Informasi (Format Berita Acara Sesuai Dokumen) -->
               <div
                 id="reportTextPreview"
-                class="mt-5 pt-4 border-t-2 border-dashed border-gray-300 text-gray-900 space-y-1 bg-gray-50/80 p-4 rounded-xl text-[12px] report-font leading-relaxed"
+                class="mt-5 pt-4 border-t-2 border-dashed border-gray-300 text-gray-900 space-y-1.5 bg-gray-50/80 p-4 rounded-xl text-[12px] report-font text-center leading-relaxed"
               >
-                <p class="font-bold text-[13px] tracking-wide mb-3 text-black">
+                <p class="font-bold text-[13px] tracking-wide text-black mb-2">
                   REPORT BAGASI DPR AREA BMA CGKIU T2E
                 </p>
-                <p>
-                  <span class="inline-block w-24 text-gray-500 font-medium"
-                    >TGL</span
-                  >: <span id="lblTgl" class="font-bold"></span>
-                </p>
-                <p>
-                  <span class="inline-block w-24 text-gray-500 font-medium"
-                    >FLIGHT</span
-                  >: <span id="lblFlight" class="font-bold"></span>
-                </p>
-                <p>
-                  <span class="inline-block w-24 text-gray-500 font-medium"
-                    >ROUTE</span
-                  >: <span id="lblRoute" class="font-bold"></span>
-                </p>
-                <p>
-                  <span class="inline-block w-24 text-gray-500 font-medium"
-                    >STD</span
-                  >: <span id="lblStd" class="font-bold"></span>
-                </p>
-                <p class="text-gray-400 font-sans tracking-widest my-1.5">
+
+                <div class="max-w-xs mx-auto text-left space-y-0.5">
+                  <p>
+                    <span class="inline-block w-20 text-gray-500 font-medium"
+                      >TGL</span
+                    >: <span id="lblTgl" class="font-bold"></span>
+                  </p>
+                  <p>
+                    <span class="inline-block w-20 text-gray-500 font-medium"
+                      >FLIGHT</span
+                    >: <span id="lblFlight" class="font-bold"></span>
+                  </p>
+                  <p>
+                    <span class="inline-block w-20 text-gray-500 font-medium"
+                      >ROUTE</span
+                    >: <span id="lblRoute" class="font-bold"></span>
+                  </p>
+                  <p>
+                    <span class="inline-block w-20 text-gray-500 font-medium"
+                      >STD</span
+                    >: <span id="lblStd" class="font-bold"></span>
+                  </p>
+                </div>
+
+                <p class="text-gray-400 font-sans tracking-widest my-1">
                   ~~~~~~~~~
                 </p>
-                <p class="font-bold mt-2">Berikut kami sampaikan :</p>
-                <p class="pl-2 text-gray-800">
+                <p class="font-bold">Berikut kami sampaikan :</p>
+                <p class="text-gray-700 text-[11px]">
                   - Negatif temuan ataupun laporan bge damage di Area BMA CGKIU
                   T2E
                 </p>
-                <div class="pt-3 mt-2 grid grid-cols-2 items-end">
-                  <div>
-                    <p class="font-bold">Mengetahui :</p>
-                    <p class="text-gray-700">Petugas Avsec BMA Onduty</p>
-                    <p
-                      class="mt-6 font-bold text-black border-b border-black inline-block px-1"
-                    >
-                      - <span id="lblPetugas"></span>
-                    </p>
-                  </div>
-                  <div
-                    class="text-right text-[10px] text-gray-500 font-sans font-bold leading-tight"
-                  >
-                    <p>TERIMA KASIH</p>
-                    <p class="text-blue-600">CGKT2E TEAM</p>
-                  </div>
+
+                <div
+                  class="pt-3 mt-1 border-t border-gray-200/60 max-w-sm mx-auto"
+                >
+                  <p class="font-bold">Mengetahui :</p>
+                  <p class="text-gray-600 text-[11px]">
+                    Petugas Avsec BMA Onduty
+                  </p>
+                  <p class="font-bold text-black mt-2">
+                    - <span id="lblPetugas"></span>
+                  </p>
+                </div>
+
+                <div
+                  class="text-[11px] text-gray-500 font-sans font-bold pt-3 tracking-wider"
+                >
+                  <p>TERIMA KASIH</p>
+                  <p class="text-blue-600">CGKT2E TEAM</p>
                 </div>
               </div>
             </div>
 
-            <!-- Action Button Download Utama -->
             <button
               id="downloadBtn"
-              class="w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-600 hover:opacity-95 text-white font-semibold py-3.5 px-4 rounded-xl shadow-xl shadow-blue-950/50 transition-all transform active:scale-[0.99] flex items-center justify-center gap-2.5 text-sm cursor-pointer group"
+              class="w-full bg-gradient-to-r from-blue-600 to-emerald-600 hover:opacity-95 text-white font-semibold py-3.5 px-4 rounded-xl shadow-xl transition-all transform active:scale-[0.99] flex items-center justify-center gap-2 text-sm cursor-pointer"
             >
-              <i
-                data-lucide="download-cloud"
-                class="w-4 h-4 group-hover:scale-110 transition-transform"
-              ></i>
-              Generate & Download Collage Image (HD)
+              <i data-lucide="download-cloud" class="w-4 h-4"></i>
+              Unduh Gambar Kolase HD (Anti-Potong)
             </button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Papan Canvas Tersembunyi untuk Pemrosesan Render Skala Tinggi -->
     <canvas id="hiddenCanvas" class="hidden"></canvas>
 
     <script>
-      // Nyalakan Engine Ikon Lucide
       lucide.createIcons();
 
-      // Binding Komponen DOM
+      // DOM Elements
       const imageInput = document.getElementById("imageInput");
       const collageGrid = document.getElementById("collageGrid");
       const placeholderText = document.getElementById("placeholderText");
@@ -367,14 +327,14 @@
       const canvas = document.getElementById("hiddenCanvas");
       const chkWatermark = document.getElementById("chkWatermark");
 
-      // Form Binding
+      // Form Inputs
       const inputTanggal = document.getElementById("inputTanggal");
       const inputPetugas = document.getElementById("inputPetugas");
       const inputFlight = document.getElementById("inputFlight");
       const inputRoute = document.getElementById("inputRoute");
       const inputStd = document.getElementById("inputStd");
 
-      // Label Preview Binding
+      // Preview Labels
       const lblTgl = document.getElementById("lblTgl");
       const lblPetugas = document.getElementById("lblPetugas");
       const lblFlight = document.getElementById("lblFlight");
@@ -383,7 +343,7 @@
 
       let loadedImages = [];
 
-      // Pembuat Tanggal Format Resmi Indonesia (Contoh: Rabu, 08 JULI 2026)
+      // Set Tanggal Otomatis (Rabu, 08 JULI 2026)
       function generateIdDate(date) {
         const days = [
           "Minggu",
@@ -395,7 +355,7 @@
           "Sabtu",
         ];
         const months = [
-          "JULI",
+          "JANUARI",
           "FEBRUARI",
           "MARET",
           "APRIL",
@@ -410,26 +370,21 @@
         ];
         return `${days[date.getDay()]}, ${String(date.getDate()).padStart(2, "0")} ${months[date.getMonth()]} ${date.getFullYear()}`;
       }
+      inputTanggal.value = generateIdDate(new Date());
 
-      // Set Tanggal Hari Ini Secara Otomatis
-      const currentDateObj = new Date();
-      inputTanggal.value = generateIdDate(currentDateObj);
-
-      // Realtime Sinkronisasi Form ke Preview Kertas Laporan
-      function syncFormToLivePreview() {
+      function syncForm() {
         lblTgl.textContent = inputTanggal.value;
         lblPetugas.textContent = inputPetugas.value || "-";
         lblFlight.textContent = inputFlight.value || "-";
         lblRoute.textContent = inputRoute.value || "-";
         lblStd.textContent = inputStd.value || "-";
       }
+      [inputPetugas, inputFlight, inputRoute, inputStd].forEach((el) =>
+        el.addEventListener("input", syncForm),
+      );
+      syncForm();
 
-      [inputPetugas, inputFlight, inputRoute, inputStd].forEach((element) => {
-        element.addEventListener("input", syncFormToLivePreview);
-      });
-      syncFormToLivePreview();
-
-      // Membaca Input File Gambar & Menyimpannya dengan Menyertakan Timestamp Waktu Unggah
+      // Ambil File Gambar
       imageInput.addEventListener("change", function (e) {
         const files = Array.from(e.target.files);
         if (files.length === 0) return;
@@ -442,10 +397,8 @@
             const img = new Image();
             img.src = event.target.result;
             img.onload = function () {
-              // "Sesuatu yang bagus": Menangkap waktu pengambilan data/gambar secara real-time
               const now = new Date();
               img.timestampString = `${String(now.getHours()).padStart(2, "0")}:${String(now.getMinutes()).padStart(2, "0")}:${String(now.getSeconds()).padStart(2, "0")} WIB`;
-
               loadedImages.push(img);
               refreshGridUI();
             };
@@ -454,18 +407,15 @@
         });
       });
 
-      // Mengatur Struktur Tampilan Kolase Secara Presisi Sesuai Kuantitas Gambar
       function refreshGridUI() {
         collageGrid.innerHTML = "";
-        const total = loadedImages.length;
-
-        if (total === 0) {
+        if (loadedImages.length === 0) {
           if (placeholderText) collageGrid.appendChild(placeholderText);
           placeholderText.style.display = "flex";
           return;
         }
 
-        // Penentuan skema kolom grid yang rapi & simetris
+        const total = loadedImages.length;
         if (total === 1) collageGrid.style.gridTemplateColumns = "1fr";
         else if (total === 2) collageGrid.style.gridTemplateColumns = "1fr 1fr";
         else if (total === 3)
@@ -474,31 +424,26 @@
 
         loadedImages.forEach((img, i) => {
           const block = document.createElement("div");
-          // Efek animasi scale-up ringan saat gambar masuk agar estetik
           block.className =
-            "relative aspect-[4/3] w-full overflow-hidden bg-gray-100 rounded-md shadow-inner border border-gray-200/40 animate-[scaleUp_0.3s_ease-out_forwards]";
-          block.style.animationDelay = `${i * 40}ms`;
+            "relative w-full overflow-hidden bg-gray-50 border border-gray-200 rounded-lg shadow-sm";
 
           const htmlImg = document.createElement("img");
           htmlImg.src = img.src;
-          htmlImg.className = "w-full h-full object-cover";
+          htmlImg.className = "w-full h-auto block object-contain"; // Menggunakan object-contain agar pratinjau tidak terpotong
 
           block.appendChild(htmlImg);
 
-          // Jika Watermark aktif, tampilkan juga di elemen preview layar handphone
           if (chkWatermark.checked) {
             const badge = document.createElement("div");
             badge.className =
-              "absolute bottom-1.5 right-1.5 bg-black/70 backdrop-blur-sm text-white font-mono text-[9px] px-1.5 py-0.5 rounded border border-white/10 tracking-wider";
+              "absolute bottom-1.5 right-1.5 bg-black/70 backdrop-blur-sm text-white font-mono text-[9px] px-1.5 py-0.5 rounded border border-white/10";
             badge.textContent = img.timestampString;
             block.appendChild(badge);
           }
-
           collageGrid.appendChild(block);
         });
       }
 
-      // Reset Semua State Gambar
       clearBtn.addEventListener("click", () => {
         loadedImages = [];
         imageInput.value = "";
@@ -506,7 +451,7 @@
       });
       chkWatermark.addEventListener("change", refreshGridUI);
 
-      // ENGINE GENERATOR: Render Canvas Beresolusi Tinggi & Download Hasil Akhir
+      // ENGINE GENERATOR CANVAS HD (ANTI-POTONG & TULISAN DI TENGAH)
       downloadBtn.addEventListener("click", function () {
         if (loadedImages.length === 0) {
           alert("Pilih/Upload foto dokumentasi terlebih dahulu.");
@@ -514,8 +459,8 @@
         }
 
         const ctx = canvas.getContext("2d");
-        const targetCanvasWidth = 1200; // Standar Industri Cetak Digital yang Tajam
-        const gapSize = 5; // Jarak margin 5 piksel absolut antar gambar sesuai instruksi
+        const targetCanvasWidth = 1200;
+        const gapSize = 5; // Jarak margin antar gambar tetap 5px presisi
 
         const total = loadedImages.length;
         let cols = 1;
@@ -524,160 +469,186 @@
         if (total >= 4) cols = 2;
 
         const rows = Math.ceil(total / cols);
-
-        // Kalkulasi lebar dan tinggi per foto secara matematis agar presisi
         const netWidth = targetCanvasWidth - gapSize * (cols - 1);
         const singleImgW = netWidth / cols;
-        const singleImgH = singleImgW * (3 / 4); // Menggunakan standar rasio foto dokumentasi 4:3 yang padat
 
-        const totalCollageHeight = singleImgH * rows + gapSize * (rows - 1);
-        const informationalAreaHeight = 390;
+        // Hitung tinggi tiap baris gambar secara proporsional dinamis agar tidak terpotong
+        let rowHeights = [];
+        for (let r = 0; r < rows; r++) {
+          let maxHeightInRow = 0;
+          for (let c = 0; c < cols; c++) {
+            const idx = r * cols + c;
+            if (idx < total) {
+              const img = loadedImages[idx];
+              const calculatedHeight = singleImgW * (img.height / img.width);
+              if (calculatedHeight > maxHeightInRow) {
+                maxHeightInRow = calculatedHeight;
+              }
+            }
+          }
+          rowHeights.push(maxHeightInRow);
+        }
 
-        // Atur Ukuran Frame Canvas Utama
+        // Total Tinggi Area Gambar Kolase
+        const totalCollageHeight =
+          rowHeights.reduce((a, b) => a + b, 0) + gapSize * (rows - 1);
+        const informationalAreaHeight = 440; // Ruang teks diperbesar agar tulisan tidak berhimpitan/terpotong
+
+        // Atur Frame Canvas Utama Secara Dinamis
         canvas.width = targetCanvasWidth;
         canvas.height = totalCollageHeight + informationalAreaHeight;
 
-        // Warnai Latar Belakang Kanvas Putih Bersih
+        // Background Putih
         ctx.fillStyle = "#FFFFFF";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        // Penggambaran Kolase Gambar ke Canvas HD
+        // Gambar seluruh foto secara proporsional utuh (No-Cropping)
         loadedImages.forEach((img, index) => {
           const colPos = index % cols;
           const rowPos = Math.floor(index / cols);
 
           const renderX = colPos * (singleImgW + gapSize);
-          const renderY = rowPos * (singleImgH + gapSize);
 
-          ctx.save();
-          ctx.beginPath();
-          ctx.rect(renderX, renderY, singleImgW, singleImgH);
-          ctx.clip();
-
-          // Logika Object-Cover Otomatis Menghindari Peregangan Gambar (Tidak Penyok)
-          const currentRatio = img.width / img.height;
-          const targetRatio = singleImgW / singleImgH;
-          let sX, sY, sW, sH;
-
-          if (currentRatio > targetRatio) {
-            sH = img.height;
-            sW = img.height * targetRatio;
-            sX = (img.width - sW) / 2;
-            sY = 0;
-          } else {
-            sW = img.width;
-            sH = img.width / targetRatio;
-            sX = 0;
-            sY = (img.height - sH) / 2;
+          // Hitung posisi Y berdasarkan total tinggi baris sebelumnya
+          let renderY = 0;
+          for (let i = 0; i < rowPos; i++) {
+            renderY += rowHeights[i] + gapSize;
           }
 
+          const currentImgHeight = singleImgW * (img.height / img.width);
+
+          // Gambar utuh tanpa distort/penyok
           ctx.drawImage(
             img,
-            sX,
-            sY,
-            sW,
-            sH,
+            0,
+            0,
+            img.width,
+            img.height,
             renderX,
             renderY,
             singleImgW,
-            singleImgH,
+            currentImgHeight,
           );
 
-          // Tambahkan Cetak Watermark Waktu Digital ke Canvas Jika Centang Aktif
+          // Cetak Watermark Waktu Digital jika aktif
           if (chkWatermark.checked) {
-            ctx.fillStyle = "rgba(0, 0, 0, 0.75)";
-            const txtWidth = ctx.measureText(img.timestampString).width + 30;
-            // Latar kotak hitam transparan di sudut kanan bawah foto
+            ctx.fillStyle = "rgba(0, 0, 0, 0.7)";
+            ctx.font = "bold 16px Courier New, monospace";
+            const txtW = ctx.measureText(img.timestampString).width + 20;
             ctx.fillRect(
-              renderX + singleImgW - txtWidth - 15,
-              renderY + singleImgH - 40,
-              txtWidth + 5,
-              30,
+              renderX + singleImgW - txtW - 10,
+              renderY + currentImgHeight - 35,
+              txtW,
+              26,
             );
 
             ctx.fillStyle = "#FFFFFF";
-            ctx.font = "bold 16px Courier New, monospace";
             ctx.fillText(
               img.timestampString,
-              renderX + singleImgW - txtWidth,
-              renderY + singleImgH - 20,
+              renderX + singleImgW - txtW + 10,
+              renderY + currentImgHeight - 17,
             );
           }
-
-          ctx.restore();
         });
 
-        // Gunting Garis Pembatas Halus Di Atas Teks Laporan
-        const textYStart = totalCollageHeight + 45;
-        ctx.strokeStyle = "#D1D5DB";
+        // Garis Pembatas Putus-putus
+        const textYStart = totalCollageHeight + 50;
+        ctx.strokeStyle = "#9CA3AF";
         ctx.lineWidth = 2;
-        ctx.setLineDash([8, 6]);
+        ctx.setLineDash([10, 8]);
         ctx.beginPath();
-        ctx.moveTo(40, totalCollageHeight + 15);
-        ctx.lineTo(targetCanvasWidth - 40, totalCollageHeight + 15);
+        ctx.moveTo(50, totalCollageHeight + 20);
+        ctx.lineTo(targetCanvasWidth - 50, totalCollageHeight + 20);
         ctx.stroke();
-        ctx.setLineDash([]); // Reset line dash
+        ctx.setLineDash([]);
 
-        // Mulai Tulis Laporan Administratif Resmi Kedirgantaraan
+        // RENDER TEKS - SETTING POSISI TENGAH (CENTER ALIGNMENT)
         ctx.fillStyle = "#000000";
-        ctx.font = "bold 26px Courier New, monospace";
-        ctx.fillText("REPORT BAGASI DPR AREA BMA CGKIU T2E", 45, textYStart);
+        ctx.textAlign = "center"; // Kunci posisi teks rata tengah
 
-        ctx.font = "22px Courier New, monospace";
-        let cursorY = textYStart + 50;
-        const leading = 34;
+        // Judul Laporan Utama
+        ctx.font = "bold 28px Courier New, monospace";
+        ctx.fillText(
+          "REPORT BAGASI DPR AREA BMA CGKIU T2E",
+          targetCanvasWidth / 2,
+          textYStart,
+        );
 
-        ctx.fillText(`TGL       : ${inputTanggal.value}`, 45, cursorY);
+        // Blok Informasi Data Ringkas
+        ctx.font = "24px Courier New, monospace";
+        let cursorY = textYStart + 55;
+        const leading = 36;
+
+        ctx.fillText(
+          `TGL       : ${inputTanggal.value}`,
+          targetCanvasWidth / 2,
+          cursorY,
+        );
         cursorY += leading;
         ctx.fillText(
           `FLIGHT    : ${inputFlight.value.toUpperCase()}`,
-          45,
+          targetCanvasWidth / 2,
           cursorY,
         );
         cursorY += leading;
         ctx.fillText(
           `ROUTE     : ${inputRoute.value.toUpperCase()}`,
-          45,
+          targetCanvasWidth / 2,
           cursorY,
         );
         cursorY += leading;
-        ctx.fillText(`STD       : ${inputStd.value}`, 45, cursorY);
+        ctx.fillText(
+          `STD       : ${inputStd.value}`,
+          targetCanvasWidth / 2,
+          cursorY,
+        );
         cursorY += leading;
 
-        ctx.fillStyle = "#9CA3AF";
-        ctx.fillText("~~~~~~~~~", 45, cursorY);
-        cursorY += leading + 5;
+        ctx.fillStyle = "#6B7280";
+        ctx.fillText("~~~~~~~~~", targetCanvasWidth / 2, cursorY);
+        cursorY += leading + 10;
 
         ctx.fillStyle = "#000000";
-        ctx.font = "bold 22px Courier New, monospace";
-        ctx.fillText("Berikut kami sampaikan :", 45, cursorY);
+        ctx.font = "bold 24px Courier New, monospace";
+        ctx.fillText(
+          "Berikut kami sampaikan :",
+          targetCanvasWidth / 2,
+          cursorY,
+        );
         cursorY += leading;
+
         ctx.font = "22px Courier New, monospace";
         ctx.fillText(
           "- Negatif temuan ataupun laporan bge damage di Area BMA CGKIU T2E",
-          45,
+          targetCanvasWidth / 2,
           cursorY,
         );
-        cursorY += leading + 20;
-
-        ctx.font = "bold 22px Courier New, monospace";
-        ctx.fillText("Mengetahui :", 45, cursorY);
-        cursorY += leading;
-        ctx.font = "22px Courier New, monospace";
-        ctx.fillText("Petugas Avsec BMA Onduty", 45, cursorY);
-        cursorY += leading;
+        cursorY += leading + 25;
 
         ctx.font = "bold 24px Courier New, monospace";
-        ctx.fillText(`- ${inputPetugas.value}`, 45, cursorY);
+        ctx.fillText("Mengetahui :", targetCanvasWidth / 2, cursorY);
+        cursorY += leading;
+        ctx.font = "22px Courier New, monospace";
+        ctx.fillText(
+          "Petugas Avsec BMA Onduty",
+          targetCanvasWidth / 2,
+          cursorY,
+        );
+        cursorY += leading + 5;
 
-        // Sisi Pojok Kanan Bawah Penutup
-        ctx.font = "bold 18px Helvetica, Arial, sans-serif";
-        ctx.fillStyle = "#6B7280";
-        ctx.fillText("TERIMA KASIH", targetCanvasWidth - 200, cursorY - 20);
+        ctx.font = "bold 26px Courier New, monospace";
+        ctx.fillText(`- ${inputPetugas.value}`, targetCanvasWidth / 2, cursorY);
+        cursorY += leading + 30;
+
+        // Penutup Tim Rata Tengah
+        ctx.font = "bold 20px Helvetica, Arial, sans-serif";
+        ctx.fillStyle = "#4B5563";
+        ctx.fillText("TERIMA KASIH", targetCanvasWidth / 2, cursorY);
+        cursorY += 24;
         ctx.fillStyle = "#2563EB";
-        ctx.fillText("CGKT2E TEAM", targetCanvasWidth - 200, cursorY);
+        ctx.fillText("CGKT2E TEAM", targetCanvasWidth / 2, cursorY);
 
-        // Ekstraksi Image Link untuk Memulai Proses Unduh File Otomatis
+        // Mulai Proses Download Otomatis
         const outUrl = canvas.toDataURL("image/png", 1.0);
         const hiddenAnchor = document.createElement("a");
         const nameSignature = inputFlight.value.trim().replace(/\s+/g, "_");
@@ -686,19 +657,5 @@
         hiddenAnchor.click();
       });
     </script>
-
-    <!-- Keyframe Styles Animasi Micro-interaction Layout Preview -->
-    <style>
-      @keyframes scaleUp {
-        0% {
-          transform: scale(0.96);
-          opacity: 0;
-        }
-        100% {
-          transform: scale(1);
-          opacity: 1;
-        }
-      }
-    </style>
   </body>
 </html>
